@@ -1,2 +1,4 @@
 # GenAI
-author gouri
+author gouri 
+i am gouri
+
