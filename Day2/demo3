@@ -1,0 +1,22 @@
+import pandas as pd
+import pandasql as ps
+
+filepath = "employee_data.csv"
+df = pd.read_csv(filepath)
+
+print("Dataframe column types:")
+print(df.dtypes)
+
+print("\nEmployee data:")
+print(df)
+
+query = """
+SELECT job, SUM(sal) AS total
+FROM df
+GROUP BY job
+"""
+
+result = ps.sqldf(query, locals())
+
+print("\nQuery result:")
+print(result)
